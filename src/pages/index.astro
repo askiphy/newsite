@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Footer from '../components/Footer.astro'
+---
+
+<Layout title="Сергей Фомчуков">
+	<main>
+		<h1 class="name"><span class="text-gradient">Sergey Fomchukov</span></h1>
+		<h3 class="subinfo text-gradient">Developer of web applications</h3>
+		<div style="text-align: center;">
+			<a href="/">
+				<img src="https://avatars.githubusercontent.com/u/69781290" class="avatar">
+			</a>
+		</div>
+		<p class="instructions">
+			Projects:
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://old.askiphy.online/"
+				title="Old site"
+				body="Go to old version of site."
+				img="https://askiphy.online/assets/MySite.png"
+			/>
+			<Card
+				href="https://raya.askiphy.online/"
+				title="Raya-Prime"
+				body="Discord bot with a lot of functions. Created according to MrLololoshka season."
+				img="https://askiphy.online/assets/rayaprime.png"
+			/>
+			<Card
+				href="/"
+				title="My site"
+				body="New version of my site. Now you are here."
+			/>
+			<Card
+				href="https://snt.askiphy.online/"
+				title="StarryNight Team"
+				body="My team,that develop story modpacks for Minecraft."
+			/>
+			<Card
+				href="https://lite.askiphy.online/"
+				title="Old site v2"
+				body="Old, updated version of my first site."
+			/>
+		</ul>
+	</main>
+	<Footer></Footer>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+	body {
+		font-family: 'Nunito', cursive;
+		margin: 0;
+	}
+
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.subinfo {
+		text-align: center;
+	}
+
+	.name {
+		text-decoration: underline;
+	}
+
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		text-align: center;
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+
+	.avatar_wrap {
+		flex: fit-content;
+		justify-content: center;
+	}
+
+	.avatar {
+		padding: 10px;
+		height: 5cm;
+		border-radius: 50%;
+		border: solid #286fb7 1mm;
+	}
+</style>

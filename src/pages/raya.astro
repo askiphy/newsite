@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BotPage from '../layouts/BotPage.astro'
+import Footer from '../components/Footer.astro'
+import BotCommand from "../components/BotCommand.astro";
+---
+
+<BotPage title="Райя-Прайм" desc="Привет! Я Райя-Прайм, лучшая П.Е.Р.С.И.К во вселенной! :>">
+    <ul role="list" class="link-card-grid">
+        <BotCommand
+                title="/work"
+                body="Сходите на работу, чтобы получить РЧ"
+        />
+        <BotCommand
+                title="/clear"
+                body="Очистка чата"
+        />
+    </ul>
+</BotPage>
+
+<style>
+    main {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    body {
+        font-family: 'Nunito', cursive;
+        margin: 0;
+    }
+
+    .astro-a {
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 220px;
+        height: auto;
+        z-index: -1;
+    }
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    .subinfo {
+        text-align: center;
+    }
+    .text-gradient {
+        background-image: linear-gradient(
+                45deg,
+                rgb(194, 10, 40),
+                rgb(224, 29, 62) 30%,
+                white 60%
+        );;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+    .instructions {
+        margin-bottom: 2rem;
+        border: 1px solid rgba(var(--accent-light), 25%);
+        background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+    .instructions strong {
+        color: rgb(var(--accent-light));
+    }
+    .link-card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 2rem;
+        padding: 0;
+    }
+</style>

@@ -1,0 +1,105 @@
+---
+import {Astro} from "astro/env";
+import Footer from "../components/Footer.astro";
+import Layout from "./Layout.astro";
+interface Props {
+    title: string;
+    desc: string;
+}
+
+const { title , desc} = Astro.props;
+---
+
+<Layout title={title}>
+    <main>
+        <h1><span class="text-gradient">{title}</span></h1>
+        <h3 class="subinfo text-gradient">Discord бот</h3>
+        <h3 class="subinfo text-gradient">{desc}</h3>
+        <p class="instructions">
+            Команды:
+        </p>
+        <slot />
+    </main>
+    <Footer></Footer>
+</Layout>
+
+<style is:global>
+    :root {
+        --accent: 3, 87, 166;
+        --accent-light: 46, 154, 255;
+        --accent-dark: 28, 92, 153;
+        --accent-gradient: linear-gradient(
+                45deg,
+                rgb(var(--accent)),
+                rgb(var(--accent-light)) 30%,
+                white 60%
+        );
+    }
+    html {
+        font-family: system-ui, sans-serif;
+        background: #181818;
+        background-size: 224px;
+    }
+    code {
+        font-family:
+                Menlo,
+                Monaco,
+                Lucida Console,
+                Liberation Mono,
+                DejaVu Sans Mono,
+                Bitstream Vera Sans Mono,
+                Courier New,
+                monospace;
+    }
+
+    .instructions {
+        margin-bottom: 2rem;
+        border: 1px solid rgba(var(--accent-light), 25%);
+        background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+    .instructions strong {
+        color: rgb(var(--accent-light));
+    }
+
+    .subinfo {
+        text-align: center;
+    }
+    .text-gradient {
+        background-image: linear-gradient(
+                45deg,
+                rgb(13, 68, 118),
+                rgb(40, 111, 183) 30%,
+                white 60%
+        );;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+
+    main {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    body {
+        font-family: 'Nunito', cursive;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+</style>
