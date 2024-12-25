@@ -1,0 +1,157 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TeamMember from "../components/TeamMember.astro";
+import YoutuberCard from "../components/YoutuberCard.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="StarryNight Team" icon="./snt.ico">
+    <main>
+        <h1>
+            <span class="logo-text">ApexStudio</span>
+        </h1>
+        <p class="info">
+            Мы - команда разрабатывающая сюжет для игры Minecraft с использованием своего собственного мода StoryBuilder.
+        </p>
+        <h2 class="info">
+            История
+        </h2>
+        <p class="info">
+            Официально, студия была открыта 29 октября 2024 года. Студия была создана для создания сезонов Лэйдзи, но в последствии студия стала делать сюжет, для других людей.
+        </p>
+        <h2 class="info">
+            Наша команда
+        </h2>
+        <ul role="list" class="team-members-grid">
+            <TeamMember
+                    name="askiphy"
+                    phrase="И помните: askiphy заботится о Вас!"
+                    desc="Основатель студии, основатель команды StoryProjects(ныне не существует)."
+                    img="https://avatars.githubusercontent.com/u/69781290"
+                    role="Глава команды, самый главный кодер."
+            />
+            <TeamMember
+                    name="Метла"
+                    phrase="I LOVE BLENDER!!!!!"
+                    desc="Снимал раньше сюжетные сезоны от SP, но в последствии отошел от этого."
+                    img="./team/metla.png"
+                    role="Аниматор Blender, немного художник"
+            />
+            <TeamMember
+                    name="breadedyt"
+                    phrase="Лучше поздно чем никогда, так что пофиг на дед лайны."
+                    desc="Хороший собеседник"
+                    img="./team/breadedyt.jpg"
+                    role="Дизайнер, старший билдер"
+            />
+            <TeamMember
+                    name="☭⁅SeNnHeS⁆☼"
+                    phrase="Когда я строю, я строю как ярый коммунист, за идею."
+                    desc="Самый лучший билдер, отличный певец, вокалист песни 'В сердце тьма'"
+                    img="./team/sennhes.jpg"
+                    role="Билдер"
+            />
+            <TeamMember
+                    name="Салат"
+                    phrase="Люблю Сережу :3"
+                    desc="Любит Сережу. Постоянно говорит про суицид :3"
+                    img="./team/salat.jpg"
+                    role="Билдер"
+            />
+        </ul>
+        <h2 class="info">
+            Делаем сюжет для:
+        </h2>
+        <ul role="list" class="team-members-grid">
+            <YoutuberCard
+                    name="Лэйдзи"
+                    img="./youtuber/laydzi.jpg"
+                    url="https://www.youtube.com/@laydzi"
+            />
+        </ul>
+        <h2 class="info">
+            Наши проекты:
+        </h2>
+        <ul role="list" class="team-members-grid">
+            <Card
+                    title="StoryBuilder"
+                    body="Приватный сюжетный мод."
+                    href=""
+                    img="./mod/sb.png"
+            />
+            <Card
+                    title="ApexSkills"
+                    body="Мод, добавляющий систему прокачки персонажа(в разработке)."
+                    href=""
+                    img="./mod/apskills.png"
+            />
+            <Card
+                    title="ApexSkills: MundoMagis Compat"
+                    body="Связывает мод ApexSkills и мод MundoMagis."
+                    href=""
+                    img="./mod/asmmcompat.png"
+            />
+        </ul>
+        <h2 class="info">
+            Наши подразделения:
+        </h2>
+        <ul role="list" class="team-members-grid">
+            <Card
+                    href=""
+                    title="ApexMods"
+                    body="Подразделение, создающее моды на Minecraft"
+                    img="./branch/apmods.png"
+            />
+        </ul>
+</Layout>
+
+<style>
+    .logo-text {
+        color: #3b75cc;
+        -webkit-background-clip: text;
+        background-size: 400%;
+        background-position: 0%;
+    }
+
+    main {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    body {
+        font-family: 'Nunito', cursive;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .section-logo {
+        font-size: 45px;
+        text-align: center;
+        -webkit-background-clip: text;
+        background-size: 400%;
+        background-position: 0%;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .team-members-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 2rem;
+        padding: 0;
+    }
+</style>

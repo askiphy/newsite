@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Footer from '../components/Footer.astro'
+import BestFriend from "../components/BestFriend.astro";
 ---
 
 <Layout title="Сергей Фомчуков" icon="./favicon.ico">
@@ -14,6 +15,55 @@ import Footer from '../components/Footer.astro'
 			</a>
 		</div>
 		<p class="instructions">
+			About Me:
+		</p>
+		<p>
+		<ul>
+			<li>Gender: Male</li>
+			<li>Age: 16</li>
+			<li>Hobbies: English, Programming</li>
+			<li>I write Minecraft mods, Discord and Telegram bots</li>
+		</ul>
+		<p class="instructions">
+			Tools that I use:
+		</p>
+		<ul>
+			<li>Python</li>
+			<li>JavaScript</li>
+			<li>Java</li>
+			<li>HTML</li>
+			<li>CSS</li>
+		</ul>
+		<p class="instructions">
+			Friends:
+		</p>
+		<ul role="list" class="link-card-grid">
+			<BestFriend
+				title="Tapnisu (Alexei Rybin)"
+				body="The best person, that I`ve ever met :3"
+				img="https://avatars.githubusercontent.com/u/57483029"
+				href="https://tapni.su"
+			/>
+			<Card
+				title="Metla"
+				body="My second friend :3"
+				img="./team/metla.png"
+				href="http://metla-blend.ru"
+			/>
+			<Card
+				title="Akirakitsune"
+				body="My third friend :3"
+				img="./friend/akira.jpg"
+				href="https://t.me/akirakitsunechannel"
+			/>
+			<Card
+				title="MIYA"
+				body="My fourth friend :3"
+				img="./friend/miya.jpg"
+				href="https://t.me/miya_mito"
+			/>
+		</ul>
+		<p class="instructions">
 			Projects:
 		</p>
 		<ul role="list" class="link-card-grid">
@@ -25,6 +75,12 @@ import Footer from '../components/Footer.astro'
 			/>
 			<Card
 				href="https://askiphy.online/raya"
+				title="Raya-Prime V2"
+				body="Discord bot with a lot of functions. Created according to MrLololoshka season."
+				img="./projects/rayaV2.jpg"
+			/>
+			<Card
+				href="http://old.askiphy.online/rayaprime-page/"
 				title="Raya-Prime"
 				body="Discord bot with a lot of functions. Created according to MrLololoshka season."
 				img="https://old.askiphy.online/assets/rayaprime.png"
@@ -33,19 +89,49 @@ import Footer from '../components/Footer.astro'
 				href="/"
 				title="My site"
 				body="New version of my site. Now you are here."
-				img=""
+				img="./projects/newsite.jpg"
 			/>
 			<Card
-				href="https://askiphy.online/snt"
-				title="StarryNight Team"
-				body="My team,that develop story modpacks for Minecraft."
-				img=""
+				href="/apstudio"
+				title="ApexStudio"
+				body="My team, that develop story modpacks for Minecraft."
+				img="./apexstudio.png"
 			/>
 			<Card
 				href="https://lite.askiphy.online/"
 				title="Old site v2"
 				body="Old, updated version of my first site."
-				img=""
+				img="./projects/litesite.jpg"
+			/>
+			<Card
+				href="https://mcdocs.askiphy.online/"
+				title="Documentation"
+				body="Documentation for some my projects."
+				img="./projects/askidocs.png"
+			/>
+			<Card
+				href="https://maven.askiphy.online/"
+				title="Maven Repository"
+				body="Repository for my projects."
+				img="./projects/askimaven.jpg"
+			/>
+			<Card
+				href="https://mods.askiphy.online/"
+				title="Mods"
+				body="Site with info about all my mods(in dev)."
+				img="./projects/askimods.jpg"
+			/>
+			<Card
+				href="https://status.askiphy.online/"
+				title="Status"
+				body="Status of my projects and some technical information."
+				img="./projects/askistatus.png"
+			/>
+			<Card
+				href="https://api.askiphy.online/"
+				title="API Services"
+				body="Some API services for my projects."
+				img="./projects/askiapi.png"
 			/>
 		</ul>
 	</main>
