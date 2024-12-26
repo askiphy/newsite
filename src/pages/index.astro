@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Footer from '../components/Footer.astro'
 import BestFriend from "../components/BestFriend.astro";
+import NewCard from "../components/NewCard.astro";
 ---
 
 <Layout title="Сергей Фомчуков" icon="./favicon.ico">
@@ -14,114 +15,112 @@ import BestFriend from "../components/BestFriend.astro";
 				<img src="https://avatars.githubusercontent.com/u/69781290" class="avatar">
 			</a>
 		</div>
-		<p class="instructions">
-			About Me:
-		</p>
-		<p>
-		<ul>
-			<li>Gender: Male</li>
-			<li>Age: 16</li>
-			<li>Hobbies: English, Programming</li>
-			<li>I write Minecraft mods, Discord and Telegram bots</li>
-		</ul>
-		<p class="instructions">
-			Tools that I use:
-		</p>
-		<ul>
-			<li>Python</li>
-			<li>JavaScript</li>
-			<li>Java</li>
-			<li>HTML</li>
-			<li>CSS</li>
-		</ul>
+		<div class="link-card-grid">
+			<div class="instructions">
+				<p>Gender: Male</p>
+				<p>Age: 16</p>
+				<p>Hobbies: English, Programming</p>
+				<p>I write Minecraft mods, Discord and Telegram bots</p>
+			</div>
+			<div class="instructions">
+				<p>
+					Tools that I use:
+				</p>
+				<p>Python</p>
+				<p>JavaScript</p>
+				<p>Java</p>
+				<p>HTML</p>
+				<p>CSS</p>
+			</div>
+		</div>
 		<p class="instructions">
 			Friends:
 		</p>
-		<ul role="list" class="link-card-grid">
+		<div class="link-card-grid instructions">
 			<BestFriend
 				title="Tapnisu (Alexei Rybin)"
 				body="The best person, that I`ve ever met :3"
 				img="https://avatars.githubusercontent.com/u/57483029"
 				href="https://tapni.su"
 			/>
-			<Card
+			<NewCard
 				title="Metla"
 				body="My second friend :3"
 				img="./team/metla.png"
 				href="http://metla-blend.ru"
 			/>
-			<Card
+			<NewCard
 				title="Akirakitsune"
 				body="My third friend :3"
 				img="./friend/akira.jpg"
 				href="https://t.me/akirakitsunechannel"
 			/>
-			<Card
+			<NewCard
 				title="MIYA"
 				body="My fourth friend :3"
 				img="./friend/miya.jpg"
 				href="https://t.me/miya_mito"
 			/>
-		</ul>
+		</div>
 		<p class="instructions">
 			Projects:
 		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
+		<ul role="list" class="link-card-grid instructions">
+			<NewCard
 				href="https://old.askiphy.online/"
 				title="Old site"
 				body="Go to old version of site."
 				img="https://old.askiphy.online/assets/MySite.png"
 			/>
-			<Card
+			<NewCard
 				href="https://askiphy.online/raya"
 				title="Raya-Prime V2"
 				body="Discord bot with a lot of functions. Created according to MrLololoshka season."
 				img="./projects/rayaV2.jpg"
 			/>
-			<Card
+			<NewCard
 				href="http://old.askiphy.online/rayaprime-page/"
 				title="Raya-Prime"
 				body="Discord bot with a lot of functions. Created according to MrLololoshka season."
 				img="https://old.askiphy.online/assets/rayaprime.png"
 			/>
-			<Card
+			<NewCard
 				href="/"
 				title="My site"
 				body="New version of my site. Now you are here."
 				img="./projects/newsite.jpg"
 			/>
-			<Card
+			<NewCard
 				href="https://lite.askiphy.online/"
 				title="Old site v2"
 				body="Old, updated version of my first site."
 				img="./projects/litesite.jpg"
 			/>
-			<Card
+			<NewCard
 				href="https://mcdocs.askiphy.online/"
 				title="Documentation"
 				body="Documentation for some my projects."
 				img="./projects/askidocs.png"
 			/>
-			<Card
+			<NewCard
 				href="https://maven.askiphy.online/"
 				title="Maven Repository"
 				body="Repository for my projects."
 				img="./projects/askimaven.jpg"
 			/>
-			<Card
+			<NewCard
 				href="https://mods.askiphy.online/"
 				title="Mods"
 				body="Site with info about all my mods(in dev)."
 				img="./projects/askimods.jpg"
 			/>
-			<Card
+			<NewCard
 				href="https://status.askiphy.online/"
 				title="Status"
 				body="Status of my projects and some technical information."
 				img="./projects/askistatus.png"
 			/>
-			<Card
+			<NewCard
 				href="https://api.askiphy.online/"
 				title="API Services"
 				body="Some API services for my projects."
@@ -184,11 +183,11 @@ import BestFriend from "../components/BestFriend.astro";
 	}
 	.instructions {
 		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		border: 1mm solid rgb(46, 154, 255);
+		background: #222222;
 		text-align: center;
 		padding: 1.5rem;
-		border-radius: 8px;
+		border-radius: 15px;
 	}
 	.instructions strong {
 		color: rgb(var(--accent-light));
@@ -207,8 +206,26 @@ import BestFriend from "../components/BestFriend.astro";
 
 	.avatar {
 		padding: 10px;
-		height: 5cm;
-		border-radius: 50%;
-		border: solid #286fb7 1mm;
+		border-radius: 1em;
+		width: 15em;
+		border: solid rgb(46, 154, 255) 1mm;
+	}
+
+	.grid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+
+	.friends {
+		padding: 1px;
+		text-align: center;
+		color: #fff;
+	}
+
+	.position {
+		display: grid;
+		place-items: center;
 	}
 </style>
