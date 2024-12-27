@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Changelogs" icon="./favicon.ico">
+    <main>
+        <h1>
+            <span class="logo-text">Changelogs</span>
+        </h1>
+        <p class="instructions">
+            UPDATE v2.1 (Alpha) (27.12.2024)
+        </p>
+        <p class="instructions">
+            Changes:<br/>
+            - Started porting for mobile phones<br/>
+            - Created smooth color changing for cards<br/>
+            - Added changelogs page
+        </p>
+    </main>
+</Layout>
+
+<style>
+    .logo-text {
+        color: #3b75cc;
+        -webkit-background-clip: text;
+        background-size: 400%;
+        background-position: 0%;
+    }
+
+    .instructions {
+        margin-bottom: 2rem;
+        border: 1mm solid rgb(46, 154, 255);
+        background: #222222;
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+    .instructions strong {
+        color: rgb(var(--accent-light));
+    }
+
+    main {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: white;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    body {
+        font-family: 'Roboto Light', cursive;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .section-logo {
+        font-size: 45px;
+        text-align: center;
+        -webkit-background-clip: text;
+        background-size: 400%;
+        background-position: 0%;
+    }
+
+    .info {
+        text-align: center;
+    }
+
+    .team-members-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+        gap: 2rem;
+        padding: 0;
+    }
+</style>
