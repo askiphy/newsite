@@ -35,6 +35,7 @@ const { href, title, body, img } = Astro.props;
         color: white;
         text-align: center;
         overflow: hidden;
+        height: 100%;
     }
 
     .card h1,
@@ -43,7 +44,7 @@ const { href, title, body, img } = Astro.props;
     }
 
     .cardA {
-        width: 100%;
+        max-width: 100%;
         text-decoration: none;
         color: white;
     }
@@ -60,12 +61,14 @@ const { href, title, body, img } = Astro.props;
     .card:hover {
         background-color: #3e3e3e;
         opacity: 0.8;
+        transition: background-color 1000ms linear;
     }
 
     .card .logo {
         border-radius: 1em;
-        width: 15em;
+        max-width: 15em;
         border: solid rgb(46, 154, 255) 1mm;
+        height: auto;
     }
 
     p {

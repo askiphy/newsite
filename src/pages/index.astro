@@ -36,7 +36,7 @@ import NewCard from "../components/NewCard.astro";
 		<p class="instructions">
 			Friends:
 		</p>
-		<div class="link-card-grid instructions">
+		<ul class="link-card-grid instructions">
 			<BestFriend
 				title="Tapnisu (Alexei Rybin)"
 				body="The best person, that I`ve ever met :3"
@@ -49,19 +49,31 @@ import NewCard from "../components/NewCard.astro";
 				img="./team/metla.png"
 				href="http://metla-blend.ru"
 			/>
-			<NewCard
+			<BestFriend
 				title="Akirakitsune"
 				body="My third friend :3"
 				img="./friend/akira.jpg"
 				href="https://t.me/akirakitsunechannel"
 			/>
-			<NewCard
+			<BestFriend
 				title="MIYA"
 				body="My fourth friend :3"
 				img="./friend/miya.jpg"
 				href="https://t.me/miya_mito"
 			/>
-		</div>
+			<NewCard
+				title="Frenya"
+				body="My fifth friend :3"
+				img="./friend/frenya.jpg"
+				href="https://t.me/frenchic993"
+			/>
+			<NewCard
+				title="DAX"
+				body="My sixth friend :3"
+				img="./friend/dax.jpg"
+				href="https://t.me/tutdax"
+			/>
+		</ul>
 		<p class="instructions">
 			Projects:
 		</p>
@@ -155,7 +167,7 @@ import NewCard from "../components/NewCard.astro";
 		top: -32px;
 		left: 50%;
 		transform: translatex(-50%);
-		width: 220px;
+		max-width: 220px;
 		height: auto;
 		z-index: -1;
 	}
@@ -181,6 +193,7 @@ import NewCard from "../components/NewCard.astro";
 		background-size: 400%;
 		background-position: 0%;
 	}
+
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1mm solid rgb(46, 154, 255);
@@ -195,7 +208,7 @@ import NewCard from "../components/NewCard.astro";
 	.link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
+		gap: 4rem;
 		padding: 0;
 	}
 
@@ -207,8 +220,8 @@ import NewCard from "../components/NewCard.astro";
 	.avatar {
 		padding: 10px;
 		border-radius: 1em;
-		width: 15em;
-		border: solid rgb(46, 154, 255) 1mm;
+		max-width: 15em;
+		border: 1mm solid rgb(46, 154, 255);
 	}
 
 	.grid {
