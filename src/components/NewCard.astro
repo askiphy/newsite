@@ -9,23 +9,23 @@ interface Props {
 const { href, title, body, img } = Astro.props;
 ---
 
-<a href={href} class="cardA">
-    <div class="card">
-        <img
+<li class="card">
+        <a href={href} class="cardA">
+            <img
                 class="logo"
                 id="image"
                 src={img}
-        />
-        <h2>
-            <span>--</span>
-            {title}
-            <span>--</span>
-        </h2>
-        <p>
-            {body}
-        </p>
-    </div>
-</a>
+            />
+            <h2>
+                <span>--</span>
+                    {title}
+                <span>--</span>
+            </h2>
+            <p>
+                {body}
+            </p>
+        </a>
+</li>
 <style>
     .card {
         margin: 1em;
@@ -35,7 +35,8 @@ const { href, title, body, img } = Astro.props;
         color: white;
         text-align: center;
         overflow: hidden;
-        height: 100%;
+        list-style: none;
+        display: flex;
     }
 
     .card h1,
@@ -65,10 +66,10 @@ const { href, title, body, img } = Astro.props;
     }
 
     .card .logo {
-        border-radius: 1em;
-        max-width: 15em;
-        border: solid rgb(46, 154, 255) 1mm;
+        width: 100%;
         height: auto;
+        border-radius: 7px;
+        border: solid rgb(46, 154, 255) 1mm;
     }
 
     p {

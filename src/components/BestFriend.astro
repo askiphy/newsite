@@ -9,8 +9,8 @@ interface Props {
 const { href, title, body, img } = Astro.props;
 ---
 
-<a href={href} class="cardA">
-    <div class="card">
+<li class="card">
+    <a href={href} class="cardA">
         <img
                 class="logo"
                 id="image"
@@ -24,8 +24,8 @@ const { href, title, body, img } = Astro.props;
         <p>
             {body}
         </p>
-    </div>
-</a>
+    </a>
+</li>
 <style>
     .card {
         margin: 1em;
@@ -35,7 +35,8 @@ const { href, title, body, img } = Astro.props;
         color: white;
         text-align: center;
         overflow: hidden;
-        height: 100%;
+        list-style: none;
+        display: flex;
     }
 
     .card h1,
@@ -66,7 +67,8 @@ const { href, title, body, img } = Astro.props;
 
     .card .logo {
         border-radius: 1em;
-        max-width: 15em;
+        width: 100%;
+        height: auto;
         border: solid rgb(255, 166, 0) 1mm;
         animation: cardBorder 10s infinite linear;
     }
