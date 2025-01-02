@@ -10,7 +10,7 @@ import NewCard from "../components/NewCard.astro";
 	<main>
 		<div class="gir_1" id="gir"></div>
 		<div class="snow"></div>
-		<h1 class="name"><span class="text-gradient">Sergey Fomchukov</span></h1>
+		<h1 class="name"><span class="text-gradient" id="start">Sergey Fomchukov</span></h1>
 		<h3 class="subinfo text-gradient">Developer of web applications</h3>
 		<svg version="1.1" id="xtree" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			 viewBox="0 0 50 50">
@@ -72,7 +72,7 @@ import NewCard from "../components/NewCard.astro";
 				<p>CSS</p>
 			</div>
 		</div>
-		<p class="instructions">
+		<p class="instructions" id="friends">
 			Friends:
 		</p>
 		<ul class="link-card-grid instructions">
@@ -113,12 +113,12 @@ import NewCard from "../components/NewCard.astro";
 				href="https://t.me/tutdax"
 			/>
 		</ul>
-		<p class="instructions">
+		<p class="instructions" id="projects">
 			Projects:
 		</p>
 		<ul role="list" class="link-card-grid instructions">
 			<NewCard
-				href="https://old.askiphy.online/"
+				href="https://old.askiphy.ru/"
 				title="Old site"
 				body="Go to old version of site."
 				img="https://old.askiphy.online/assets/MySite.png"
@@ -130,7 +130,7 @@ import NewCard from "../components/NewCard.astro";
 				img="./projects/rayaV2.jpg"
 			/>
 			<NewCard
-				href="http://old.askiphy.online/rayaprime-page/"
+				href="http://old.askiphy.ru/rayaprime-page/"
 				title="Raya-Prime"
 				body="Discord bot with a lot of functions. Created according to MrLololoshka season."
 				img="https://old.askiphy.online/assets/rayaprime.png"
@@ -142,37 +142,37 @@ import NewCard from "../components/NewCard.astro";
 				img="./projects/newsite.jpg"
 			/>
 			<NewCard
-				href="https://lite.askiphy.online/"
+				href="https://lite.askiphy.ru/"
 				title="Old site v2"
 				body="Old, updated version of my first site."
 				img="./projects/litesite.jpg"
 			/>
 			<NewCard
-				href="https://mcdocs.askiphy.online/"
+				href="https://mcdocs.askiphy.ru/"
 				title="Documentation"
 				body="Documentation for some my projects."
 				img="./projects/askidocs.png"
 			/>
 			<NewCard
-				href="https://maven.askiphy.online/"
+				href="https://maven.askiphy.ru/"
 				title="Maven Repository"
 				body="Repository for my projects."
 				img="./projects/askimaven.jpg"
 			/>
 			<NewCard
-				href="https://mods.askiphy.online/"
+				href="https://mods.askiphy.ru/"
 				title="Mods"
 				body="Site with info about all my mods(in dev)."
 				img="./projects/askimods.jpg"
 			/>
 			<NewCard
-				href="https://status.askiphy.online/"
+				href="https://status.askiphy.ru/"
 				title="Status"
 				body="Status of my projects and some technical information."
 				img="./projects/askistatus.png"
 			/>
 			<NewCard
-				href="https://api.askiphy.online/"
+				href="https://api.askiphy.ru/"
 				title="API Services"
 				body="Some API services for my projects."
 				img="./projects/askiapi.png"
@@ -309,6 +309,7 @@ import NewCard from "../components/NewCard.astro";
 		padding: 1.5rem;
 		border-radius: 15px;
 	}
+
 	.instructions strong {
 		color: rgb(var(--accent-light));
 	}
