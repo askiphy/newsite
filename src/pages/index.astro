@@ -7,8 +7,8 @@ import NewCard from "../components/NewCard.astro";
 ---
 
 <Layout title="Сергей Фомчуков" icon="./favicon.ico">
+	<div class="gir_1" id="gir"></div>
 	<main>
-		<div class="gir_1" id="gir"></div>
 		<div class="snow"></div>
 		<h1 class="name"><span class="text-gradient" id="start">Sergey Fomchukov</span></h1>
 		<h3 class="subinfo text-gradient">Developer of web applications</h3>
@@ -194,12 +194,15 @@ import NewCard from "../components/NewCard.astro";
 		z-index: 1;
 		pointer-events: none
 	}
+
 	.gir_1 {
 		background-position: 0 0
 	}
+
 	.gir_2 {
 		background-position: 0 -62px
 	}
+
 	.gir_3 {
 		background-position: 0 -124px
 	}
