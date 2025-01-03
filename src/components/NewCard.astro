@@ -10,33 +10,39 @@ const { href, title, body, img } = Astro.props;
 ---
 
 <li class="card">
-        <a href={href} class="cardA">
-            <img
-                class="logo"
-                id="image"
-                src={img}
-            />
-            <h2>
-                <span>--</span>
-                    {title}
-                <span>--</span>
-            </h2>
-            <p>
-                {body}
-            </p>
-        </a>
+    <img
+            class="logo"
+            id="image"
+            src={img}
+    />
+    <h2>
+        <span>--</span>
+        {title}
+        <span>--</span>
+    </h2>
+    <p>
+        {body}
+    </p>
+    <a href={href} class="">
+        <button>
+            Перейти
+        </button>
+    </a>
 </li>
+
 <style>
     .card {
         margin: 1em;
         padding: 1em;
-        border-radius: 1cm;
+        border-radius: 5px;
         background-color: #1c1c1c;
         color: white;
         text-align: center;
         overflow: hidden;
         list-style: none;
         display: flex;
+        flex-flow: column;
+        border: solid rgb(46, 154, 255) 1mm;
     }
 
     .card h1,
@@ -59,17 +65,10 @@ const { href, title, body, img } = Astro.props;
         margin: 1em;
     }
 
-    .card:hover {
-        background-color: #3e3e3e;
-        opacity: 0.8;
-        transition: background-color 1000ms linear;
-    }
-
     .card .logo {
         width: 100%;
         height: auto;
         border-radius: 7px;
-        border: solid rgb(46, 154, 255) 1mm;
     }
 
     p {
