@@ -9,7 +9,7 @@ interface Props {
 const { href, title, body, img } = Astro.props;
 ---
 
-<li class="card">
+<div class="card">
     <img
             class="logo"
             id="image"
@@ -25,10 +25,10 @@ const { href, title, body, img } = Astro.props;
     </p>
     <a href={href} class="">
         <button>
-            Перейти
+            Go
         </button>
     </a>
-</li>
+</div>
 
 <style>
     .card {
@@ -57,12 +57,18 @@ const { href, title, body, img } = Astro.props;
     }
 
     .card button {
-        background-color: #222222;
-        color: #fff;
+        background-color: #fff;
+        color: black;
         border: none;
         padding: 1em;
         border-radius: 1em;
-        margin: 1em;
+        margin: 0.5em;
+        max-width: 100%;
+    }
+
+    .card button:hover {
+        background-color: gold;
+        cursor: pointer;
     }
 
     .card .logo {
